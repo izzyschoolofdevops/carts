@@ -11,7 +11,7 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                echo 'this is buil job'
+                echo 'this is build job'
                 sh 'mvn compile'
             }
         }
