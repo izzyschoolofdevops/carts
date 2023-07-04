@@ -11,19 +11,19 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                echo 'this is the first job'
-                sh 'build'
+                echo 'this is buil job'
+                sh 'mvn compile'
             }
         }
         stage('test'){
             steps{
-                echo 'this is the second job'
+                echo 'this is the test job'
                 sh 'mvn clean test'
             }
         }
         stage('package'){
             steps{
-                echo 'this is the third job'
+                echo 'this is the package job'
                 sh 'mvn package -DskipTests'
                
             }
